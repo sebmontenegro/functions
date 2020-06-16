@@ -3,10 +3,6 @@ preload <- function(x){
   #not, it installs it.
   x <- as.character(x)
   if(!require(x,character.only = TRUE)){
-    install.packages(x,repos = "https://cran.r-project.org")
-    require(x,character.only = TRUE)
-  }
-  else{
-    require(x,character.only = TRUE)
-  }
+    install.packages(x,repos = "https://cran.r-project.org")}
+  require(x,character.only = TRUE)
 }
